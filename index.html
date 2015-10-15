@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jquery test</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <style>
+
+      .off{
+        background-image:url("off.jpg");
+        background-repeat:no-repeat;
+        background-size:100%;
+        width:200px;
+        height:500px;
+        margin:auto;
+      }
+      .on{
+        background-image:url("on.jpg");
+        background-repeat:no-repeat;
+        background-size:100%;
+        width:200px;
+        height:500px;
+        margin:auto;
+      }
+      .hidden{
+        display:none;
+      }
+
+    </style>
+    <script>
+      $(document).ready(function(){
+
+        $("div").click(function(){
+          console.log("on");
+          $("div").addClass("on");
+          $(".on").removeClass("hidden");
+        });
+
+      
+
+
+      });
+
+
+    </script>
+  </head>
+  <body>
+    <div class="off"></div>
+    <div class="on hidden"></div>
+  </body>
+</html>
